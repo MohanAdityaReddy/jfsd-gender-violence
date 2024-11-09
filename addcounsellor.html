@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - Add Counsellor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #e8f5e9;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #1b2a48;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar ul {
+            list-style-type: none;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            color: #cfd8dc;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .sidebar ul li a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .sidebar .signout a {
+            color: #ffab91;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .sidebar .signout a:hover {
+            color: #ffffff;
+        }
+        /* Main content */
+        .content {
+            flex-grow: 1;
+            padding: 40px;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4caf50;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .header .about {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header .about a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .header .about a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #c8e6c9;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+        /* Form */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #4caf50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+        }
+        /* Button */
+        .btn-add {
+            padding: 12px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-add:hover {
+            background-color: #388e3c;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .btn-add {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="adminindex.html">VICTIM DETAILS</a></li>
+
+
+<li><a href="addcounsellor.html">ADD COUNSELLOR</a></li>
+            <li><a href="addlegaladvisor.html">ADD LEGAL ADVISOR</a></li>
+            <li><a href="addlegal.html">UPDATE LEGAL RIGHTS</a></li>
+            <li><a href="victimcases.html">VICTIM CASES</a></li>
+        </ul>
+        <div class="signout">
+            <a href="index.html">Sign out</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="header">
+            <h1>Admin Portal</h1>
+            <div class="about">
+                <a href="about.html">About</a>
+                <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 24px;"></i>
+            </div>
+        </div>
+
+        <h2>Add Counsellor</h2>
+        <!-- Counsellor Form -->
+        <div class="form-group">
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Phone no">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Experience">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Address">
+        </div>
+
+        <button class="btn-add">Add</button>
+    </div>
+</body>
+</html>
